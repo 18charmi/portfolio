@@ -4,7 +4,9 @@ import { Suspense } from "react";
 function SceneBg({ children }: { children: any }) {
   return (
     <Suspense fallback={null}>
-      <Canvas>{children}</Canvas>
+      <Canvas style={{
+        backgroundImage: 'url(/space.jpg)'
+      }}>{children}</Canvas>
     </Suspense>
   );
 }

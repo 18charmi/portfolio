@@ -1,26 +1,23 @@
 import { useEffect, useState } from "react";
-import THREE from "three";
+// import THREE from "three";
 
-function Star({ color = "white" }) {
-  const [position, setPosition] = useState<number[]>();
-  useEffect(() => {
+function Star({ color = "red" }) {
+  const [position, setPosition] = useState(() => {
     let res = Array(3)
       .fill(0)
-      .map(
-        () => THREE.MathUtils.randFloatSpread(2)
-        //   {
-        //     let min = -10,
-        //       max = 10;
-        //     return Math.floor(Math.random() * (max - min + 1) + min);
-        //   }
-      );
-    setPosition(res);
-    console.log(res);
-  }, []);
-  if (!!position) return;
+      .map(() => {
+        let min = -5,
+          max = 5;
+        return Math.floor(Math.random() * (max - min + 1) + min);
+      });
+    return res as [number, number, number];
+  });
+
+  console.log({ position });
   return (
     <mesh position={position}>
-      <boxGeometry />
+      <sphereGeometry  args={[0.09, 10]}
+      />
       <meshStandardMaterial color={color} />
     </mesh>
   );

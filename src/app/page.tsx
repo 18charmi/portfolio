@@ -4,18 +4,20 @@ import Torus from "@/component/Torus";
 import Light from "@/component/Light";
 import { OrbitControls } from "@react-three/drei";
 import Star from "@/component/Star";
+import Box from "@/component/Box";
 function Home() {
   return (
     <div className="h-screen w-screen">
       <SceneBg>
-        <OrbitControls/>
+        {/* <OrbitControls /> */}
         <Light />
+        <Box image={true}/>
         <Torus />
-        {/* {Array(3)
+        {Array(100)
           .fill("")
           .map((d, i) => (
-            <Star key={`star-${i}`} />
-          ))} */}
+            <Star key={`star-${i}`} color="white" />
+          ))}
       </SceneBg>
     </div>
   );

@@ -2,7 +2,7 @@ import { useFrame } from "@react-three/fiber";
 import { useRef } from "react";
 import { Mesh } from "three";
 
-function Torus({ color = "blue" }) {
+function Torus({ color = "#FDB813" }) {
   const ref = useRef<Mesh>(null);
   useFrame((s, d) => {
     if (!ref.current) return;
@@ -12,7 +12,8 @@ function Torus({ color = "blue" }) {
   });
   return (
     <mesh ref={ref}>
-      <torusGeometry args={[2, , 16]} />
+      {/* <torusGeometry args={[1, , 16, ]} /> */}
+      <sphereGeometry args={[0.09, 10]} />
       <meshStandardMaterial color={color} />
     </mesh>
   );

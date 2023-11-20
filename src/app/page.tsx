@@ -16,7 +16,7 @@ function Home() {
       <section id="project" className="h-screen ">
         <Projects />
       </section>
-      <section id="skill" className="h-fit">
+      <section id="skill" className="h-screen">
         <TechStack />
       </section>
       <section className="bg-gray-500" id="connect">

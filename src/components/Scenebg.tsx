@@ -1,3 +1,4 @@
+"use client"
 import { Canvas, useFrame, useThree } from "@react-three/fiber";
 import { Suspense, useEffect, useLayoutEffect, useRef, useState } from "react";
 import Torus from "@/components/Torus";

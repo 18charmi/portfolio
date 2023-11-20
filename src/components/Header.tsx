@@ -1,10 +1,10 @@
 "use client";
 import { useEffect, useState } from "react";
-import Image from "next/image";
 import Link from "next/link";
 import cx from "classnames";
 import Button from "./Button";
 import { useRouter } from "next/navigation";
+import { Code2 } from "lucide-react";
 
 function Header() {
   const [animateHeader, setAnimateHeader] = useState(false);
@@ -49,7 +49,7 @@ function Header() {
             className="text-white text-base font-bold"
             id="header-brand-name"
           >
-            LOGO
+            <Code2 size={40}/>
           </span>
         </Link>
 
@@ -62,7 +62,7 @@ function Header() {
               "trasition ease-in-out duration-500 "
             )}
           >
-            {["About", "Skill", "Project"].map((d, i) => (
+            {["About", "Project", "Skill"].map((d, i) => (
               <li
                 key={`navSection ${i}`}
                 className={cx(

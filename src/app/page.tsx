@@ -3,21 +3,22 @@
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import AboutSection from "./AboutSection";
+import TechStack from "./TechStack";
+import Projects from "./Projects";
 
 function Home() {
   return (
     <>
       <Header />
-      <section id="about" className="h-screen ">
+      <section id="about" className="h-screen">
         <AboutSection />
       </section>
-      <section id="skill" className="h-screen ">
-        <div className="pt-24">skill Section</div>
-      </section>
       <section id="project" className="h-screen ">
-        <div className="pt-24">project Section</div>
+        <Projects />
       </section>
-      <PageContent />
+      <section id="skill" className="h-fit">
+        <TechStack />
+      </section>
       <section className="bg-gray-500" id="connect">
         <Footer />
       </section>

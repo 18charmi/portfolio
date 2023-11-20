@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 const roles = [
   "React Developer...",
   "Web Developer...",
-  "Frontend Developer...",
+  "Frontend Dev...",
 ];
 export const useTypedAnimation = () => {
   const [typeRole, updateTypedRole] = useState("");

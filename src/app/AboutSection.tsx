@@ -19,7 +19,7 @@ export default function AboutSection() {
   }, []);
 
   return (
-    <div className="pt-24 max-w-6xl mx-auto flex">
+    <div className="pt-24 max-w-5xl mx-auto flex flex-col md:flex-row">
       <div className="flex-1">
         <h1 className="pt-24 pb-20 text-5xl lg:text-7xl font-medium w-full mx-auto font-sans">
           {/* mobile version */}
@@ -41,10 +41,11 @@ export default function AboutSection() {
             </p>
           </div>
         </h1>
-        <p className="text-gray-400 text-lg">
-          React Developer experienced in building, testing, and deploying web
-          applications. Passionate about exploring web technologies to enhance
-          skills & develop innovative solutions.
+        <p className="text-gray-400 text-lg text-center">
+          React Developer experienced in building, testing, & deploying web
+          applications.
+          <br /> Passionate about exploring web technologies to enhance skills &
+          develop innovative solutions.
         </p>
       </div>
       <div
@@ -57,7 +58,7 @@ export default function AboutSection() {
         <IconReact
           width={200}
           height={200}
-          className={cx("animate-spining text-sky-300")}
+          className={"text-sky-300"}
         />
       </div>
     </div>

@@ -15,7 +15,8 @@ const config: Config = {
       },
       animation: {
         spining: "spin 10s linear infinite",
-        zoomIn: "scaleIn 1s ease-in"
+        zoomIn: "scaleIn 1s ease-in",
+        'gradientBorder': 'rotation 5s linear infinite'
       },
       keyframes: {
         scaleIn: {
@@ -23,6 +24,14 @@ const config: Config = {
           to: {
             'scale': '1',
 
+          }
+        },
+        rotation: {
+          '0%': {
+            '--gradient-angle': '0deg'
+          },
+          '100%': {
+            '--gradient-angle': '360deg'
           }
         }
       }

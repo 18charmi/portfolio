@@ -26,3 +26,23 @@ html {
   -ms-overflow-style: none; /* IE and Edge */
   scrollbar-width: none; /* Firefox */
 }
+
+@property --gradient-angle {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
+.border-gradient-animation::before,
+.border-gradient-animation::after {
+  z-index: -1;
+  position: absolute;
+  inset: -2px;
+  background: linear-gradient(
+    var(--gradient-angle),
+    #7c3aed,
+    #000000,
+    #000000,
+    #fef08a
+  );
+  border-radius: 6px;
+}

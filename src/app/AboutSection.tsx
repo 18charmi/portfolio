@@ -24,7 +24,7 @@ export default function AboutSection() {
         <h1 className="pt-24 pb-20 text-5xl lg:text-7xl font-medium w-full mx-auto font-sans">
           {/* mobile version */}
           <div className="w-full text-center lg:hidden">
-            <p className="text-purple-200">Hi! I'm</p>
+            <p className="text-purple-200">Hi! I am</p>
             <p className="text-purple-200 ">Charmi</p>
             <p className=" text-4xl lg:text-6xl blinking-cursor bg-gradient-to-r from-purple-500 to-slate-50 text-transparent bg-clip-text">
               {typeRole}
@@ -33,7 +33,7 @@ export default function AboutSection() {
           {/* web version */}
           <div className="w-full text-start hidden lg:block">
             <p>
-              <span className="text-purple-200">Hi! I'm </span>
+              <span className="text-purple-200">Hi! I am </span>
               <span className="text-purple-200 ">Charmi</span>
             </p>
             <p className="text-4xl lg:text-6xl blinking-cursor bg-gradient-to-r from-purple-500 to-slate-50 text-transparent bg-clip-text">

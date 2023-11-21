@@ -70,16 +70,16 @@ function Header() {
                   "transition-colors ease-in-out duration-300"
                 )}
               >
-                <Link
-                  href={`/#${d.toLowerCase()}`}
-                  className="flex items-center py-2 px-5 text-text-color text-sm"
-                  // onClick={(e) => {
-                  //   e.preventDefault();
-                  //   router.push(`/#${d.toLowerCase()}`);
-                  // }}
+                <div
+                  // href={`/#${d.toLowerCase()}`}
+                  className="flex items-center py-2 px-5 text-text-color text-sm cursor-pointer"
+                  onClick={(e) => {
+                    // e.preventDefault();
+                    router.push(`/#${d.toLowerCase()}`);
+                  }}
                 >
                   {d}
-                </Link>
+                </div>
               </li>
             ))}
             <li className={"flex justify-center items-center "}>

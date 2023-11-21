@@ -44,13 +44,13 @@ export default function Projects() {
   );
 
   return (
-    <div className="mt-24 py-24 w-screen text-slate-300">
+    <div className="mt-24 py-24 w-screen text-slate-300 relative">
       <div className="px-4 md:px-16 relative">
         <h3 className="w-full py-4 text-center font-bold border-y-2 my-10 text-lg">
           Projects
         </h3>
 
-        <div className="flex flex-row flex-wrap gap-10 justify-around py-8">
+        <div className="flex flex-row flex-wrap gap-12 justify-around py-8">
           {PROJECT_DETAILS.map((d, i) => (
             <div
               className={cx(
@@ -72,16 +72,17 @@ export default function Projects() {
             </div>
           ))}
         </div>
-
-        {typeof activeIndex !== "undefined" ? (
+      </div>
+      {typeof activeIndex !== "undefined" ? (
+        <div className="absolute inset-0 flex justify-center items-center h-full w-full">
           <ProjectPreview
             project={PROJECT_DETAILS[activeIndex]}
             onClose={() => updateActiveIndex(undefined)}
           />
-        ) : (
-          <></>
-        )}
-      </div>
+        </div>
+      ) : (
+        <></>
+      )}
     </div>
   );
 }

@@ -10,13 +10,13 @@ function Home() {
   return (
     <>
       <Header />
-      <section id="about" className="h-screen">
+      <section id="about" className="h-max">
         <AboutSection />
       </section>
-      <section id="project" className="h-screen ">
+      <section id="project" className="h-max">
         <Projects />
       </section>
-      <section id="skill" className="h-screen">
+      <section id="skill" className="h-max">
         <TechStack />
       </section>
       <section className="bg-gray-500" id="connect">

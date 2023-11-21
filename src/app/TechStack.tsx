@@ -34,17 +34,18 @@ export default function TechStack() {
     if (ref.current) {
       let container: HTMLDivElement = ref.current;
       let scrollOffset = container.scrollLeft;
+      let width = container.offsetWidth;
 
       if (scrollNext) {
-        if (container.scrollLeft > 500 * TECH_STACK.length) {
+        if (container.scrollLeft >= width * (TECH_STACK.length - 1)) {
           scrollOffset = 0;
         } else {
-          scrollOffset += 500;
+          scrollOffset += width;
         }
       } else {
         if (container.scrollLeft === 0) {
-          scrollOffset = 1000 * TECH_STACK.length;
-        } else scrollOffset += -500;
+          scrollOffset = width * TECH_STACK.length;
+        } else scrollOffset += -width;
       }
 
       container.scrollLeft = scrollOffset;

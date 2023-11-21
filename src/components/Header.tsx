@@ -73,10 +73,10 @@ function Header() {
                 <Link
                   href={`/#${d.toLowerCase()}`}
                   className="flex items-center py-2 px-5 text-text-color text-sm"
-                  onClick={(e) => {
-                    e.preventDefault();
-                    router.push(`/#${d.toLowerCase()}`);
-                  }}
+                  // onClick={(e) => {
+                  //   e.preventDefault();
+                  //   router.push(`/#${d.toLowerCase()}`);
+                  // }}
                 >
                   {d}
                 </Link>

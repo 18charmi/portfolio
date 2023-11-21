@@ -1,36 +1,13 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Portfolio with Next.js, Tailwind CSS, and React Three Fiber
 
-## Getting Started
+Welcome to my portfolio repository! This project is built with Next.js, Tailwind CSS, and React Three Fiber, creating a dynamic and visually appealing portfolio to showcase my web development skills.
 
-First, run the development server:
+## Features
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+- **Next.js for Seamless Navigation:** Utilizing server-side rendering for a smooth browsing experience.
+- **Tailwind CSS for Stylish Design:** A sleek and modern design achieved through Tailwind's utility-first CSS framework.
+- **React Three Fiber for 3D Visualization:** Immersive 3D elements integrated into the UI for a unique experience.
+- **Dynamic Content Rendering:** Easily update and showcase new projects, skills, and experiences.
+- **Optimized Performance:** Code splitting, lazy loading, and optimization for fast loading times.
+- **Customizable and Extendable:** Easily customize and extend the portfolio template for your needs.
+- **Interactive Components:** Engaging user interface with animated transitions and interactive elements.

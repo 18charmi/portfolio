@@ -3,12 +3,11 @@ import { useEffect, useState } from "react";
 import Link from "next/link";
 import cx from "classnames";
 import Button from "./Button";
-import { useRouter } from "next/navigation";
 import { Code2 } from "lucide-react";
 
 function Header() {
   const [animateHeader, setAnimateHeader] = useState(false);
-  const router = useRouter();
+
   useEffect(() => {
     const listener = () => {
       if (window.scrollY > 80) {
@@ -22,6 +21,15 @@ function Header() {
     };
   }, []);
 
+  const scrolltoHash = (element_id: string) => {
+    const element = document.getElementById(element_id);
+    if (element)
+      element.scrollIntoView({
+        behavior: "smooth",
+        block: "end",
+        inline: "nearest",
+      });
+  };
   return (
     <header className="px-6 py-5 fixed w-[100vw] z-50">
       <div
@@ -49,7 +57,7 @@ function Header() {
             className="text-white text-base font-bold"
             id="header-brand-name"
           >
-            <Code2 size={40}/>
+            <Code2 size={40} />
           </span>
         </Link>
 
@@ -73,10 +81,11 @@ function Header() {
                 <Link
                   href={`#${d.toLowerCase()}`}
                   className="flex items-center py-2 px-5 text-text-color text-sm cursor-pointer"
-                  // onClick={(e) => {
-                    // e.preventDefault();
+                  onClick={(e) => {
+                    e.preventDefault();
+                    scrolltoHash(d.toLowerCase());
                     // router.push(`#${d.toLowerCase()}`);
-                  // }}
+                  }}
                 >
                   {d}
                 </Link>
@@ -91,7 +100,7 @@ function Header() {
                 className={cx(
                   "!rounded-full bg-gradient-to-r from-violet-600 via-red-400 to-yellow-200 text-white w-max"
                 )}
-                onClick={() => router.push(`/#connect`)}
+                onClick={() => scrolltoHash(`connect`)}
               >
                 Lets connect
               </Button>
@@ -104,7 +113,7 @@ function Header() {
             { "opacity-0 translate-x-5": animateHeader },
             "transition ease-in-out duration-500 "
           )}
-          onClick={() => router.push(`/#connect`)}
+          onClick={() => scrolltoHash(`connect`)}
         >
           Lets connect
         </Button>

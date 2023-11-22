@@ -55,7 +55,7 @@ export default function ProjectPreview({ project, onClose }: IProjectPreview) {
           <div className="font-bold">TECH USED: </div>
           <div className="flex flex-wrap flex-row gap-2">
             {project.tech.map((d, i) => (
-              <span className="p-2 border border-gray-200 rounded-md text-sm">{d}</span>
+              <span key={d} className="p-2 border border-gray-200 rounded-md text-sm">{d}</span>
             ))}
           </div>
           <br />

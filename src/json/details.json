@@ -1,0 +1,130 @@
+{
+    "header": {
+        "links": [
+            {
+                "title": "About",
+                "link": "#about",
+                "id": "about"
+            },
+            {
+                "title": "Project",
+                "link": "#project",
+                "id": "project"
+            },
+            {
+                "title": "Skill",
+                "link": "#skill",
+                "id": "skill"
+            }
+        ],
+        "cta": {
+            "title": "Lets connect",
+            "id": "connect"
+        }
+    },
+    "about": {
+        "name": "Charmi",
+        "roles": [
+            "React Developer...",
+            "Web Developer...",
+            "Frontend Dev..."
+        ],
+        "description": "Experienced in building, testing, & deploying web applications. Passionate about exploring web technologies, enhancing skills & develop innovative solutions."
+    },
+    "project": [
+        {
+            "name": "Simwa",
+            "description": "SIMWA : Surgical Instruments Merchandising Web Application \n- Easy to use: Web application for Inventory Management & Billing.- Allows user to enter their clients, suppliers, products.\n- Keeps track for existing product.\n- Maintains record for client and suppliers payments.\n- Allows PDF invoice generation",
+            "link": "https://youtu.be/ctAPJoRyyMw",
+            "image": "/proj-1.png",
+            "tech": [
+                "React.js", "Next.js", "TailwindCss", "Zustand", "Prisma", "Postgresql"
+            ]
+        },
+        {
+            "name": "Responsive Site Design",
+            "description": "A Responsive Website Clone using TailwindCss.\n- Implemented Smooth Animations\n- Responsive Mobile view",
+            "link": "https://responsive-design-clone.netlify.app/",
+            "image": "/proj-2.png",
+            "tech": [
+                "React.js", "Next.js", "TailwindCss"
+            ]
+        },
+        {
+            "name": "Invoice Generator",
+            "description": "A simple invoice generator web application created in Nextjs using Google sheets for data.\n- Allows user to generate the invoice by easy selection.\n- Invoice generation automates the calculation according to selections.(reducing human error in calculation)\n- The generate Invoice can be easily downloaded in .pdf format\n- Listing of clients, products are statically defined for demo purpose.",
+            "link": "https://invoice-generator-example.netlify.app/",
+            "image": "/proj-3.png",
+            "tech": [
+                "React.js", "Next.js", "TailwindCss", "Google-Spreadsheet"
+            ]
+        }
+    ],
+    "tech": [
+        {
+            "category": "Framework",
+            "list": [
+                "Next.js"
+            ]
+        },
+        {
+            "category": "CSS Library",
+            "list": [
+                "Bootstrap",
+                "Tailwind",
+                "NextUI",
+                "Mantine"
+            ]
+        },
+        {
+            "category": "State Management",
+            "list": [
+                "Redux",
+                "Zustand"
+            ]
+        },
+        {
+            "category": "Component Development/Documentation",
+            "list": [
+                "Storybook"
+            ]
+        },
+        {
+            "category": "Testing (basic)",
+            "list": [
+                "Jest + React Testing Library "
+            ]
+        },
+        {
+            "category": "Development Languages",
+            "list": [
+                "Javascript",
+                "Typescript"
+            ]
+        }
+    ],
+    "footer": {
+        "links": [
+            {
+                "title": "Connect via",
+                "list": [
+                    {
+                        "id": "linkedin",
+                        "title": "LinkedIn",
+                        "link": "https://www.linkedin.com/in/charmi-vyas-806444172"
+                    },
+                    {
+                        "id": "github",
+                        "title": "Github",
+                        "link": "https://github.com/18charmi"
+                    },
+                    {
+                        "id": "email",
+                        "title": "Email",
+                        "link": "mailto:12charmi@gmail.com"
+                    }
+                ]
+            }
+        ]
+    }
+}

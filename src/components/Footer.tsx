@@ -1,30 +1,27 @@
 import cx from "classnames";
 import { Github, Linkedin, Mail } from "lucide-react";
-
 import Link from "next/link";
-const NAV_LINKS = [
-  {
-    title: "Connect ",
-    list: [
-      {
-        title: "LinkedIn",
-        icon: <Linkedin size={16} />,
-        link: "https://www.linkedin.com/in/charmi-vyas-806444172",
-      },
-      {
-        title: "Github",
-        icon: <Github size={16} />,
-        link: "https://github.com/18charmi",
-      },
-      {
-        title: "Email",
-        icon: <Mail size={16} />,
-        link: "mailto:12charmi@gmail.com",
-      },
-    ],
-  },
-];
-function Footer() {
+
+interface IFooter {
+  links: Array<{
+    title: string;
+    list: Array<{ id: string; title: string; link: string }>;
+  }>;
+}
+function Footer({ links }: IFooter) {
+  function renderIcon(id: string) {
+    switch (id) {
+      case "linkedin":
+        return <Linkedin size={16} />;
+        break;
+      case "github":
+        return <Github size={16} />;
+        break;
+      case "email":
+        return <Mail size={16} />;
+        break;
+    }
+  }
   return (
     <footer className="w-full max-w-md md:max-w-4xl mx-auto">
       <div id="footer-top" className="flex">
@@ -41,7 +38,7 @@ function Footer() {
             id="footer-nav"
             className="flex flex-1 flex-wrap flex-col md:flex-row md:justify-end gap-8 text-sm"
           >
-            {NAV_LINKS.map((nav, index) => (
+            {links.map((nav, index) => (
               <div
                 key={`navGroup-${index}`}
                 id="footer-nav-group"
@@ -53,7 +50,7 @@ function Footer() {
                       id="header-brand-name"
                       className=" mr-2 font-medium text-dark-200 text-sm md:text-base flex flex-1 items-center h-max"
                     >
-                      Connect via
+                      {nav.title}
                     </span>
                   </li>
                   {nav.list.map((l, i) => (
@@ -67,7 +64,7 @@ function Footer() {
                         className=" "
                         title={l.title}
                       >
-                        {l.icon}
+                        {renderIcon(l.id)}
                       </Link>
                     </li>
                   ))}

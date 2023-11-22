@@ -3,14 +3,14 @@ import { X } from "lucide-react";
 import { useEffect, useState } from "react";
 import Image from "next/image";
 import useComponentVisible from "@/hoc/useComponentVisible";
+import { TProject } from "./Projects";
 
-export default function ProjectPreview({
-  project,
-  onClose,
-}: {
-  project: { name: string; description: string; image: string; link: string };
+interface IProjectPreview {
+  project: TProject;
   onClose: () => void;
-}) {
+}
+
+export default function ProjectPreview({ project, onClose }: IProjectPreview) {
   const { ref, isComponentVisible } = useComponentVisible(true);
   const [loaded, setLoaded] = useState(false);
   useEffect(() => {
@@ -25,7 +25,7 @@ export default function ProjectPreview({
     <div
       ref={ref}
       className={cx(
-        "max-w-[350px] max-h-[500px] bg-gray-100 z-10 transition-all ease-in-out duration-500 border border-black rounded text-gray-800",
+        "max-w-[350px] md:max-w-3xl max-h-[500px] bg-gray-100 z-10 transition-all ease-in-out duration-500 border border-black rounded text-gray-800",
         { "scale-0": !loaded },
         { "scale-1": loaded }
       )}
@@ -50,14 +50,23 @@ export default function ProjectPreview({
             className="rounded-md"
           />
         </div>
-        {/* description */}
-        <div className="font-bold">PROJECT DESCRIPTION: </div>
-        <pre className="whitespace-pre-wrap h-[175px] overflow-scroll no-scrollbar">{project.description}</pre>
 
+        <div className="h-[200px] overflow-scroll no-scrollbar">
+          <div className="font-bold">TECH USED: </div>
+          <div className="flex flex-wrap flex-row gap-2">
+            {project.tech.map((d, i) => (
+              <span className="p-2 border border-gray-200 rounded-md text-sm">{d}</span>
+            ))}
+          </div>
+          <br />
+          {/* description */}
+          <div className="font-bold">PROJECT DESCRIPTION: </div>
+          <pre className="whitespace-pre-wrap">{project.description}</pre>
+        </div>
         <a
           href={project.link}
           target="_blank"
-          className="text-blue-800 font-semibold absolute bottom-8"
+          className="text-blue-800 font-semibold absolute bottom-8 right-8"
         >
           PREVIEW LINK
         </a>

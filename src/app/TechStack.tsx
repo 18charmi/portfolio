@@ -2,33 +2,11 @@ import Button from "@/components/Button";
 import cx from "classnames";
 import { CheckCircle } from "lucide-react";
 import { useRef } from "react";
-const TECH_STACK = [
-  {
-    category: "Framework",
-    list: ["Next.js"],
-  },
-  {
-    category: "CSS Library",
-    list: ["Bootstrap", "Tailwind", "NextUI", "Mantine"],
-  },
-  {
-    category: "State Management",
-    list: ["Redux", "Zustand"],
-  },
-  {
-    category: "Component Development/Documentation",
-    list: ["Storybook"],
-  },
-  {
-    category: "Testing (basic)",
-    list: ["Jest + React Testing Library "],
-  },
-  {
-    category: "Development Languages",
-    list: ["Javascript", "Typescript"],
-  },
-];
-export default function TechStack() {
+
+interface ITechStack {
+  list: Array<{ category: string; list: string[] }>;
+}
+export default function TechStack({ list }: ITechStack) {
   const ref = useRef(null);
   const scroll = (scrollNext: boolean) => {
     if (ref.current) {
@@ -37,14 +15,14 @@ export default function TechStack() {
       let width = container.offsetWidth;
 
       if (scrollNext) {
-        if (container.scrollLeft >= width * (TECH_STACK.length - 1)) {
+        if (container.scrollLeft >= width * (list.length - 1)) {
           scrollOffset = 0;
         } else {
           scrollOffset += width;
         }
       } else {
         if (container.scrollLeft === 0) {
-          scrollOffset = width * TECH_STACK.length;
+          scrollOffset = width * list.length;
         } else scrollOffset += -width;
       }
 
@@ -66,7 +44,7 @@ export default function TechStack() {
             className="flex flex-row overflow-y-hidden overflow-x-scroll no-scrollbar w-full h-full  snap-x snap-mandatory scroll-smooth"
             ref={ref}
           >
-            {TECH_STACK.map((d) => {
+            {list.map((d) => {
               return (
                 <div
                   key={`stack-${d.category}`}

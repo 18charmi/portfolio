@@ -5,7 +5,12 @@ import cx from "classnames";
 import Button from "./Button";
 import { Code2 } from "lucide-react";
 
-function Header() {
+interface IHeader {
+  links: Array<{ title: string; link: string; id: string }>;
+  cta: { title: string; id: string };
+}
+
+function Header({ links, cta }: IHeader) {
   const [animateHeader, setAnimateHeader] = useState(false);
 
   useEffect(() => {
@@ -70,7 +75,7 @@ function Header() {
               "trasition ease-in-out duration-500 "
             )}
           >
-            {["About", "Project", "Skill"].map((d, i) => (
+            {links.map((d, i) => (
               <li
                 key={`navSection ${i}`}
                 className={cx(
@@ -79,15 +84,14 @@ function Header() {
                 )}
               >
                 <Link
-                  href={`#${d.toLowerCase()}`}
+                  href={d.link}
                   className="flex items-center py-2 px-5 text-text-color text-sm cursor-pointer"
                   onClick={(e) => {
                     e.preventDefault();
-                    scrolltoHash(d.toLowerCase());
-                    // router.push(`#${d.toLowerCase()}`);
+                    scrolltoHash(d.id);
                   }}
                 >
-                  {d}
+                  {d.title}
                 </Link>
               </li>
             ))}
@@ -100,9 +104,9 @@ function Header() {
                 className={cx(
                   "!rounded-full bg-gradient-to-r from-violet-600 via-red-400 to-yellow-200 text-white w-max"
                 )}
-                onClick={() => scrolltoHash(`connect`)}
+                onClick={() => scrolltoHash(cta.id)}
               >
-                Lets connect
+                {cta.title}
               </Button>
             </li>
           </ul>
@@ -113,9 +117,9 @@ function Header() {
             { "opacity-0 translate-x-5": animateHeader },
             "transition ease-in-out duration-500 "
           )}
-          onClick={() => scrolltoHash(`connect`)}
+          onClick={() => scrolltoHash(cta.id)}
         >
-          Lets connect
+          {cta.title}
         </Button>
       </div>
     </header>

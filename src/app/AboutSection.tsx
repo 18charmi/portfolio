@@ -1,8 +1,17 @@
 import { useTypedAnimation } from "@/hoc/useTypedAnimation";
 import { useEffect, useState } from "react";
 import cx from "classnames";
-export default function AboutSection() {
-  const { typeRole } = useTypedAnimation();
+interface IAboutSection {
+  roles: string[];
+  name: string;
+  description: string;
+}
+export default function AboutSection({
+  roles,
+  name,
+  description,
+}: IAboutSection) {
+  const { typeRole } = useTypedAnimation(roles);
   const [animateHeader, setAnimateHeader] = useState(false);
 
   useEffect(() => {
@@ -25,7 +34,7 @@ export default function AboutSection() {
           {/* mobile version */}
           <div className="w-full text-center lg:hidden">
             <p className="text-purple-200">Hi! I am</p>
-            <p className="text-purple-200 ">Charmi</p>
+            <p className="text-purple-200 ">{name}</p>
             <p className=" text-4xl lg:text-6xl blinking-cursor bg-gradient-to-r from-purple-500 to-slate-50 text-transparent bg-clip-text">
               {typeRole}
             </p>
@@ -34,18 +43,15 @@ export default function AboutSection() {
           <div className="w-full text-start hidden lg:block">
             <p>
               <span className="text-purple-200">Hi! I am </span>
-              <span className="text-purple-200 ">Charmi</span>
+              <span className="text-purple-200 ">{name}</span>
             </p>
-            <p className="text-4xl lg:text-6xl blinking-cursor bg-gradient-to-r from-purple-500 to-slate-50 text-transparent bg-clip-text">
+            <p className="text-4xl lg:text-6xl blinking-cursor bg-gradient-to-r from-purple-500 to-slate-50 text-transparent bg-clip-text min-w-[530px]">
               {typeRole}
             </p>
           </div>
         </h1>
-        <p className="text-gray-400 text-lg text-center">
-          React Developer experienced in building, testing, & deploying web
-          applications.
-          <br /> Passionate about exploring web technologies to enhance skills &
-          develop innovative solutions.
+        <p className="text-gray-400 text-lg px-4 text-center md:text-left">
+          {description}
         </p>
       </div>
       <div
@@ -55,11 +61,7 @@ export default function AboutSection() {
           "transition-all ease-in duration-300"
         )}
       >
-        <IconReact
-          width={200}
-          height={200}
-          className={"text-sky-300"}
-        />
+        <IconReact width={200} height={200} className={"text-sky-300"} />
       </div>
     </div>
   );

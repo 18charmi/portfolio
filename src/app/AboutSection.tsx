@@ -28,7 +28,7 @@ export default function AboutSection({
   }, []);
 
   return (
-    <div className="pt-24 max-w-5xl mx-auto flex flex-col md:flex-row">
+    <div className="pt-24 mx-auto flex flex-col md:flex-row gap-10 md:gap-0 md:px-6">
       <div className="flex-1">
         <h1 className="pt-24 pb-20 text-5xl lg:text-7xl font-medium w-full mx-auto font-sans">
           {/* mobile version */}
@@ -50,7 +50,7 @@ export default function AboutSection({
             </p>
           </div>
         </h1>
-        <p className="text-gray-400 text-lg px-4 text-center md:text-left">
+        <p className="text-gray-400 text-lg px-4 md:px-0 text-center md:text-justify">
           {description}
         </p>
       </div>

@@ -36,7 +36,7 @@ function Header({ links, cta }: IHeader) {
       });
   };
   return (
-    <header className="px-6 py-5 fixed w-[100vw] z-50">
+    <header className="px-6 py-5 fixed w-screen z-50 max-w-md md:max-w-5xl mx-auto left-1/2 -translate-x-1/2">
       <div
         className={cx(
           "flex justify-between items-center mx-auto my-0 relative before:w-full before:absolute before:-bottom-6 before:bg-gradient-to-r from-transparent via-slate-600 to-transparent before:h-[1px]",
@@ -111,6 +111,7 @@ function Header({ links, cta }: IHeader) {
             </li>
           </ul>
         </nav>
+
         <Button
           className={cx(
             "border border-gray-400 rounded bg-gradient-to-r from-violet-600 via-red-400 to-yellow-200  bg-clip-text text-transparent hover:text-white hover:bg-clip-padding",

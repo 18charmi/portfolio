@@ -23,7 +23,7 @@ function Footer({ links }: IFooter) {
     }
   }
   return (
-    <footer className="w-full max-w-md md:max-w-4xl mx-auto">
+    <footer className="w-full mx-auto max-w-md md:max-w-5xl">
       <div id="footer-top" className="flex">
         <div
           id="footer-container"

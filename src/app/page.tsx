@@ -11,19 +11,21 @@ function Home() {
   return (
     <>
       <Header links={header.links} cta={header.cta} />
-      <section id="about" className="h-max">
-        <AboutSection
-          name={about.name}
-          description={about.description}
-          roles={about.roles}
-        />
-      </section>
-      <section id="project" className="h-max">
-        <Projects list={project} />
-      </section>
-      <section id="skill" className="h-max">
-        <TechStack list={tech} />
-      </section>
+      <main className="max-w-md md:max-w-5xl mx-auto">
+        <section id="about" className="h-max">
+          <AboutSection
+            name={about.name}
+            description={about.description}
+            roles={about.roles}
+          />
+        </section>
+        <section id="project" className="h-max">
+          <Projects list={project} />
+        </section>
+        <section id="skill" className="h-max">
+          <TechStack list={tech} />
+        </section>
+      </main>
       <section className="bg-gray-500" id="connect">
         <Footer links={footer.links} />
       </section>

@@ -52,7 +52,7 @@ function SceneBg() {
       <Suspense fallback={null}>
         <Canvas
           style={{
-            backgroundColor: "#1F282D",
+            backgroundColor: "#001d2d",
             // backgroundImage: "url(/space.jpg)",
           }}
         >

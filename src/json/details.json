@@ -49,7 +49,7 @@
             "link": "https://responsive-design-clone.netlify.app/",
             "image": "/proj-2.png",
             "tech": [
-                "React.js", "Next.js", "TailwindCss"
+                "React.js", "Next.js", "TailwindCss", "Typescript"
             ]
         },
         {

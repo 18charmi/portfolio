@@ -102,7 +102,7 @@ function Header({ links, cta }: IHeader) {
               ></div>
               <Button
                 className={cx(
-                  "!rounded-full bg-gradient-to-r from-violet-600 via-red-400 to-yellow-200 text-white w-max"
+                  "!rounded-full bg-gradient-to-r from-background-light to-gradient-yellow  text-background w-max"
                 )}
                 onClick={() => scrolltoHash(cta.id)}
               >
@@ -114,7 +114,7 @@ function Header({ links, cta }: IHeader) {
 
         <Button
           className={cx(
-            "border border-gray-400 rounded bg-gradient-to-r from-violet-600 via-red-400 to-yellow-200  bg-clip-text text-transparent hover:text-white hover:bg-clip-padding",
+            "border border-gray-400 rounded bg-gradient-to-r from-background-light  to-gradient-yellow  bg-clip-text text-transparent hover:text-white hover:bg-clip-padding",
             { "opacity-0 translate-x-5": animateHeader },
             "transition ease-in-out duration-500 "
           )}

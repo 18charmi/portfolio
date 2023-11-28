@@ -1,10 +1,19 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+:root {
+  --primary-color-lighter: #E3F3FB;
+  --primary-color-light: #B1D9EE;
+  --primary-color: #001d2d;
+  --primary-color-bg: #00324D;
+  --gradient-start: #4E809B;
+  --gradient-end: #E3F3FB;
+  --gradient-yellow: #fef08a;
+}
 @layer components {
   .blinking-cursor:after {
     content: "|";
-    @apply text-purple-700;
+    color: #82B5D1;
     animation: blink 1s infinite;
   }
   @keyframes blink {
@@ -39,7 +48,7 @@ html {
   inset: -2px;
   background: linear-gradient(
     var(--gradient-angle),
-    #7c3aed,
+    var(--primary-color-light),
     #000000,
     #000000,
     #fef08a

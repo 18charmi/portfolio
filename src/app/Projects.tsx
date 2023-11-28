@@ -51,7 +51,7 @@ export default function Projects({ list }: IProjects) {
                   {d.intro.slice(0, 60)}
                   {d.intro.length > 60 ? "..." : ""}
                   <span
-                    className=" text-purple-300 absolute right-1 bottom-0"
+                    className=" text-background-light font-medium absolute right-1 bottom-0"
                     onClick={(e) => {
                       e.preventDefault();
                       updateActiveIndex(i);

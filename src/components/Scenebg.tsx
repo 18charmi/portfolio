@@ -52,8 +52,7 @@ function SceneBg() {
       <Suspense fallback={null}>
         <Canvas
           style={{
-            backgroundColor: "#001d2d",
-            // backgroundImage: "url(/space.jpg)",
+            backgroundColor: "var(--primary-color)"
           }}
         >
           <CustomCamera position={pos} />

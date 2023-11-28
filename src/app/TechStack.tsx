@@ -36,7 +36,7 @@ export default function TechStack({ list }: ITechStack) {
       )}
     >
       <div className="-z-10 relative border-gradient-animation h-full before:animate-gradientBorder after:animate-gradientBorder after:blur-md ">
-        <div className="h-full w-full bg-[#00324D] rounded-md flex flex-col ">
+        <div className="h-full w-full bg-background rounded-md flex flex-col ">
           <h1 className="text-center pt-4 text-slate-200 text-xl font-bold">
             Tech Stack{" "}
           </h1>

@@ -33,19 +33,19 @@ export default function AboutSection({
         <h1 className="pt-24 pb-20 text-5xl lg:text-7xl font-medium w-full mx-auto font-sans">
           {/* mobile version */}
           <div className="w-full text-center lg:hidden">
-            <p className="text-purple-200">Hi! I am</p>
-            <p className="text-purple-200 ">{name}</p>
-            <p className=" text-4xl lg:text-6xl blinking-cursor bg-gradient-to-r from-purple-500 to-slate-50 text-transparent bg-clip-text">
+            <p className="text-background-lighter">Hi! I am</p>
+            <p className="text-background-lighter ">{name}</p>
+            <p className=" text-4xl lg:text-6xl blinking-cursor bg-gradient-to-r from-gradient-start to-gradient-yellow text-transparent bg-clip-text">
               {typeRole}
             </p>
           </div>
           {/* web version */}
           <div className="w-full text-start hidden lg:block">
             <p>
-              <span className="text-purple-200">Hi! I am </span>
-              <span className="text-purple-200 ">{name}</span>
+              <span className="text-background-lighter">Hi! I am </span>
+              <span className="text-background-lighter ">{name}</span>
             </p>
-            <p className="text-4xl lg:text-6xl blinking-cursor bg-gradient-to-r from-purple-500 to-slate-50 text-transparent bg-clip-text min-w-[530px]">
+            <p className="text-4xl lg:text-6xl blinking-cursor bg-gradient-to-r from-gradient-start to-gradient-yellow text-transparent bg-clip-text min-w-[530px]">
               {typeRole}
             </p>
           </div>

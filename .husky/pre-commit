@@ -1,0 +1,2 @@
+# run the lint script every time on commit
+npm run lint
